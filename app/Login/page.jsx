@@ -4,15 +4,14 @@ import { signIn } from "next-auth/react";
 import facebook from '@/assets/facebook.png'
 import bg from '@/assets/signinbackground.png'
 import Image from "next/image";
-import Link from 'next/link';
 
-export const Signup = () => {
+export default function LoginPage() {
   return (
     <div className="flex h-screen">
   {/* Left Section - Signup Content */}
   <div className="w-2/3 flex flex-col items-center justify-center bg-blue-100 p-8">
     <h2 className="text-2xl font-bold text-blue-900 mb-6">Hello Star!</h2>
-    <p className=' text-blue-900 mb-6'>Sign in to get Started!</p>
+    <p className=' text-blue-900 mb-6'>Sign in or Login to get Started!</p>
     <div className='mb-6'>
     <form className=" space-y-4">
       <input
@@ -25,19 +24,13 @@ export const Signup = () => {
         placeholder="Password"
         className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
-      <input
-        type="comfirm-password"
-        placeholder="Comfirm Password"
-        className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-
     </form>
     </div>
     {/* Social Login Options */}
     <div className="flex w-full max-w-xs gap-x-4">
   <button
     className="px-4 flex items-center w-1/2 py-3 bg-white shadow-md rounded-2xl text-gray-700 text-center"
-    onClick={() => signIn("google")}
+
   >
     <Image className="mr-2" src={facebook} alt="Google" />
     Google
@@ -45,18 +38,13 @@ export const Signup = () => {
 
   <button
     className="px-4 flex items-center w-1/2 py-3 bg-white shadow-md rounded-2xl text-gray-700 text-center"
-    onClick={() => signIn("facebook")}
+  
   >
     <Image className="mr-2" src={google} alt="Facebook" />
     Facebook
   </button>
 </div>
-<p className="text-blue-900 my-6">
-  Already have an account?{" "}
-  <Link href="/Login" className="font-bold text-blue-600 hover:underline">
-    Log in
-  </Link>
-</p>
+
   </div>
 
   {/* Right Section - Image or Content */}
@@ -69,8 +57,6 @@ export const Signup = () => {
       <h2 className="text-white text-2xl font-bold">We want you to sing!</h2>
     </div>
   </div>
-
-
 </div>
 
   )
