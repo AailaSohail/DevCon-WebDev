@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "firebase": "^11.3.1",
+    "lucide-react": "^0.475.0",
     "bcryptjs": "^3.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.13.0",
@@ -16,7 +20,9 @@
     "next": "15.1.7",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
