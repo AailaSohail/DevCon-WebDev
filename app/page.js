@@ -1,9 +1,13 @@
 import FinalRankingChart from "@/Components/FinalRankingChart";
 import Navbar from "@/Components/Navbar";
+"use client"
+import Image from "next/image";
+import { Signup } from "./Signup/page";
 
 export default function Home() {
   return (
     <>
+    <Signup/>
       <Navbar />
       <div className=" items-center justify-items-center min-h-screen">
         <button>
